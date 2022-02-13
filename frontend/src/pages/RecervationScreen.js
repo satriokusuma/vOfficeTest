@@ -66,6 +66,12 @@ const RecervationScreen = () => {
                       <h4 className='capitalize text-sm text-gray-800 font-semibold'>Rp.{item.room.costPerHour}</h4>
                     </div>
                     <div className='col-span-2'>
+                      <label htmlFor="">Location</label>
+                    </div>
+                    <div className='col-span-4'>
+                      <h4 className='capitalize text-sm text-gray-800 font-semibold'>Jakarta</h4>
+                    </div>
+                    <div className='col-span-2'>
                       <label htmlFor="">Name</label>
                     </div>
                     <div className='col-span-4'>
