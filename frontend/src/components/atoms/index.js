@@ -8,5 +8,7 @@ import FormControl from "./FormControl";
 import Loader from "./Loader";
 import AvatarProfile from "./AvatarProfile";
 import Calendar from "./Calendar";
+import LabelRecervation from "./LabelRecervation";
+import ValueRecervation from "./ValueRecervation";
 
-export { ImageGradient, Title, Icon, Button, FormGroup, FormLabel, FormControl, Loader, AvatarProfile, Calendar };
+export { ImageGradient, Title, Icon, Button, FormGroup, FormLabel, FormControl, Loader, AvatarProfile, Calendar, LabelRecervation, ValueRecervation };
