@@ -51,7 +51,7 @@ const RecervationScreen = () => {
                   <Calendar date={new Date(item.bookingDate)} />
                   <div className='grid grid-cols-6 gap-2 py-4 items-center'>
                     <LabelRecervation className={'col-span-2'} label={'Room Name'} />
-                    <ValueRecervation className={'col-span-4'} value={item.room.roomName} />
+                    <ValueRecervation className={'col-span-4 capitalize'} value={item.room.roomName} />
 
                     <LabelRecervation className={'col-span-2'} label={'Room Cost'} />
                     <ValueRecervation className={'col-span-4'} value={item.room.costPerHour} />
