@@ -22,7 +22,7 @@ const RoomScreen = () => {
   tabTitle(`Virtual Office 4.0 | ${room.roomName}`);
 
   return (
-    <section className='pt-8'>
+    <section className='pt-8 md:pt-0 md:-mt-16'>
       {loading ? <Loader /> : error ? <h1>{error}</h1> :
         <ItemOfficeSingle room={room} />
       }
