@@ -6,5 +6,6 @@ import FormGroup from "./FormGroup";
 import FormLabel from "./FormLabel";
 import FormControl from "./FormControl";
 import Loader from "./Loader";
+import AvatarProfile from "./AvatarProfile";
 
-export { ImageGradient, Title, Icon, Button, FormGroup, FormLabel, FormControl, Loader };
+export { ImageGradient, Title, Icon, Button, FormGroup, FormLabel, FormControl, Loader, AvatarProfile };

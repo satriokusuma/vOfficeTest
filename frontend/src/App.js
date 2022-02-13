@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Footer, Navbar } from './components/organisms';
 import HomeScreen from './pages/HomeScreen';
 import LoginScreen from './pages/LoginScreen';
+import ProfileScreen from './pages/ProfileScreen';
 import RoomScreen from './pages/RoomScreen';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             <div className='flex flex-col pt-16 pb-16 px-6 md:px-8'>
               <Routes>
                 <Route path='/login' element={<LoginScreen />} />
+                <Route path='/profile' element={<ProfileScreen />} />
                 <Route path='/rooms/:id' element={<RoomScreen />} />
                 <Route path='/' exact element={<HomeScreen />} />
               </Routes>

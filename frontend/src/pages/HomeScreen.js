@@ -14,7 +14,7 @@ const HomeScreen = () => {
 
   const roomData = useSelector(state => state.roomList);
   const { loading, error, rooms } = roomData;
-
+  // console.log(roomData);
   useEffect(() => {
     dispatch(listRooms());
   }, [dispatch]);

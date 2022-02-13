@@ -1,13 +1,13 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Icon } from '../atoms';
+import { AvatarProfile, Icon } from '../atoms';
 
 const Footer = () => {
 
   const userLogin = useSelector(state => state.userLogin);
 
-  const { user } = userLogin;
+  const { userInfo } = userLogin;
 
   return (
     <nav className='flex items-center justify-center fixed bottom-0 w-full h-16 px-2 bg-white border-t border-gray-300 z-40'>
@@ -31,11 +31,11 @@ const Footer = () => {
             </Icon>
           </li>
           <li className='relative'>
-            {user ? <img
-              className="h-10 w-10 rounded-full border-2 border-red-950"
-              src="/image/avatar.jpeg"
-              alt=""
-            /> :
+            {userInfo ?
+              <Link to={`/profile`} className='cursor-pointer'>
+                <AvatarProfile src={"/image/avatar.jpeg"} alt={'test'} />
+              </Link>
+              :
               <Link to={`/login`} className='cursor-pointer'>
                 <Icon className={'h-8 w-8 text-pink-700'} classNameSecond={'h-8 w-8'}>
                   <path d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z"></path>

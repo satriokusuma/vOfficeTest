@@ -16,15 +16,15 @@ const LoginScreen = () => {
 
   const userLogin = useSelector(state => state.userLogin);
 
-  const { error, user } = userLogin;
+  const { error, userInfo } = userLogin;
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (user) {
+    if (userInfo) {
       navigate('/');;
     }
-  }, [user, navigate]);
+  }, [userInfo, navigate]);
 
   const submitHandler = (e) => {
     e.preventDefault();
