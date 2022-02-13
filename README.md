@@ -12,4 +12,4 @@ Password : Laravel2020
 Frontend : Reactjs \
 Backend : Nodejs \
 CSS Framework : Tailwindcss v 3.0 \
-Database : mysql \
+Database : mysql
