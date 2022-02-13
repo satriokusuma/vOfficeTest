@@ -5,7 +5,7 @@ const ValueRecervation = ({ className, value }) => {
 
   return (
     <div className={classes}>
-      <h4 className='capitalize text-sm text-gray-800 font-semibold'>{value}</h4>
+      <h4 className='text-sm text-gray-800 font-semibold'>{value}</h4>
     </div>
   );
 };

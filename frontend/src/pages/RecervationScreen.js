@@ -22,9 +22,6 @@ const RecervationScreen = () => {
 
   const navigate = useNavigate();
 
-  console.log(recervation);
-
-
   useEffect(() => {
     if (!userInfo) {
       navigate('/login');
@@ -63,7 +60,7 @@ const RecervationScreen = () => {
                     <ValueRecervation className={'col-span-4'} value={'Jakarta'} />
 
                     <LabelRecervation className={'col-span-2'} label={'Name'} />
-                    <ValueRecervation className={'col-span-4'} value={item.client.name} />
+                    <ValueRecervation className={'col-span-4 capitalize'} value={item.client.name} />
 
                     <LabelRecervation className={'col-span-2'} label={'Email'} />
                     <ValueRecervation className={'col-span-4'} value={item.client.email} />
@@ -79,7 +76,6 @@ const RecervationScreen = () => {
 
                     <LabelRecervation className={'col-span-2'} label={'Quota'} />
                     <ValueRecervation className={'col-span-4'} value={`${item.quotaUsed} Person`} />
-
                   </div>
                 </div>
               </div>
