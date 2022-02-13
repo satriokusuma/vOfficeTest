@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { roomListReducer, roomtDetailsReducer } from './reducers/roomReducer';
 import { userLoginReducer, userDetailsReducer } from './reducers/userReducers';
+import { recervationListReducer } from './reducers/recervationReducer';
 
 const reducer = combineReducers(
   {
@@ -9,6 +10,7 @@ const reducer = combineReducers(
     roomDetails: roomtDetailsReducer,
     userLogin: userLoginReducer,
     userDetails: userDetailsReducer,
+    recervationList: recervationListReducer
   }
 );
 

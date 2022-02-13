@@ -13,12 +13,9 @@ const ProfileScreen = () => {
 
 
   const userDetails = useSelector((state) => state.userDetails);
-  const { loading, error, user } = userDetails;
-
-
+  const { user } = userDetails;
 
   const navigate = useNavigate();
-
 
   useEffect(() => {
     if (!userInfo) {
@@ -40,9 +37,8 @@ const ProfileScreen = () => {
       // setEmail(user.data[0].email);
       // setEmail(user.data[0].name);
     }
-  }, [user]);
+  }, []);
 
-  console.log(userDetails);
 
 
   return (

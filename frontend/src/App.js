@@ -4,6 +4,7 @@ import { Footer, Navbar } from './components/organisms';
 import HomeScreen from './pages/HomeScreen';
 import LoginScreen from './pages/LoginScreen';
 import ProfileScreen from './pages/ProfileScreen';
+import RecervationScreen from './pages/RecervationScreen';
 import RoomScreen from './pages/RoomScreen';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
               <Routes>
                 <Route path='/login' element={<LoginScreen />} />
                 <Route path='/profile' element={<ProfileScreen />} />
+                <Route path='/recervation' element={<RecervationScreen />} />
                 <Route path='/rooms/:id' element={<RoomScreen />} />
                 <Route path='/' exact element={<HomeScreen />} />
               </Routes>

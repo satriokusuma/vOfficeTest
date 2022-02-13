@@ -8,7 +8,7 @@ exports.getAll = Model => async function (req, res) {
       include: [
         {
           model: room,
-          attributes: ['roomName', 'costPerHour']
+          attributes: ['roomName', 'costPerHour', 'image', 'description']
         },
         {
           model: client,
@@ -46,7 +46,7 @@ exports.getOne = Model => async function (req, res) {
       include: [
         {
           model: room,
-          attributes: ['roomName', 'costPerHour']
+          attributes: ['roomName', 'costPerHour', 'image', 'description']
         },
         {
           model: client,

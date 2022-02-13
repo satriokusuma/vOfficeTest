@@ -26,9 +26,11 @@ const Footer = () => {
             </Icon>
           </li>
           <li className='relative'>
-            <Icon className={'h-8 w-8 text-pink-700'} classNameSecond={'h-8 w-8'}>
-              <path d="M8 4v28l10-10 10 10v-28zM24 0h-20v28l2-2v-24h18z"></path>
-            </Icon>
+            <Link to={`/recervation`} className='cursor-pointer'>
+              <Icon className={'h-8 w-8 text-pink-700'} classNameSecond={'h-8 w-8'}>
+                <path d="M8 4v28l10-10 10 10v-28zM24 0h-20v28l2-2v-24h18z"></path>
+              </Icon>
+            </Link>
           </li>
           <li className='relative'>
             {userInfo ?
