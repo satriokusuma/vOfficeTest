@@ -54,7 +54,7 @@ const RecervationScreen = () => {
                     <ValueRecervation className={'col-span-4 capitalize'} value={item.room.roomName} />
 
                     <LabelRecervation className={'col-span-2'} label={'Room Cost'} />
-                    <ValueRecervation className={'col-span-4'} value={item.room.costPerHour} />
+                    <ValueRecervation className={'col-span-4'} value={`Rp.${item.room.costPerHour}`} />
 
                     <LabelRecervation className={'col-span-2'} label={'Location'} />
                     <ValueRecervation className={'col-span-4'} value={'Jakarta'} />
@@ -69,7 +69,7 @@ const RecervationScreen = () => {
                     <ValueRecervation className={'col-span-4'} value={item.client.phone} />
 
                     <LabelRecervation className={'col-span-2'} label={'Credit'} />
-                    <ValueRecervation className={'col-span-4'} value={item.client.credit} />
+                    <ValueRecervation className={'col-span-4'} value={`Rp.${item.client.credit}`} />
 
                     <LabelRecervation className={'col-span-2'} label={'Time'} />
                     <ValueRecervation className={'col-span-4'} value={`${item.startTime} to ${item.endTime}`} />
