@@ -6,7 +6,7 @@ import { listRecervation } from '../hook/actions/recervationAction';
 import { tabTitle } from '../utils/generalFunction';
 
 
-import { Calendar, Loader } from '../components/atoms';
+import { Button, Calendar, Loader } from '../components/atoms';
 
 
 const RecervationScreen = () => {
@@ -39,9 +39,9 @@ const RecervationScreen = () => {
     <div>
       {loading ? <Loader /> : error ? <h1>{error}</h1> :
         recervation.map((item) => (
-          <div key={item.id} className='-mt-10'>
+          <div key={item.id} className=''>
             <div className='py-4'>
-              <h1 className='text-xl text-red-950 font-bold'>Recervation Client List</h1>
+              <h1 className='text-xl text-red-950 font-bold'>Your Recervation Client</h1>
             </div>
             <div className="border border-gray-200 mb-6 mt-2"></div>
             <div className='flex flex-col'>
@@ -50,7 +50,7 @@ const RecervationScreen = () => {
               </div>
               <div className=''>
                 <div className='flex flex-col'>
-                  <h2 className=' text-red-950 font-semibold text-lg py-2'>Recervation Description</h2>
+                  <h2 className=' text-red-950 font-semibold text-lg py-2'>Description</h2>
                   <Calendar date={new Date(item.bookingDate)} />
                   <div className='grid grid-cols-6 gap-2 py-4 items-center'>
                     <div className='col-span-2'>
@@ -106,6 +106,7 @@ const RecervationScreen = () => {
                 </div>
               </div>
             </div>
+            <Button className={'bg-pink-600 text-white hover:bg-red-950 transition-all text-lg font-bold rounded-lg w-full my-5'} label='Download' />
             <div className="border border-gray-200 mb-4 mt-2"></div>
           </div>
         ))
