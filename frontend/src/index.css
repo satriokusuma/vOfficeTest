@@ -32,11 +32,11 @@ img {
 
 .center {
   position: absolute;
-  left: 0;
   top: 50%;
+  left: 0;
+  transform: translateX(0) translateY(-50%);
   transition: all;
   animation: fadeInBottom ease-in-out 2s;
-  transform: translate(-0, -50%);
   z-index: 9999;
 }
 
