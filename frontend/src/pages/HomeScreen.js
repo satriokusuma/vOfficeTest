@@ -4,7 +4,7 @@ import { listRooms } from '../hook/actions/roomActions';
 import { tabTitle } from '../utils/generalFunction';
 
 import { GridContainer, ItemOffice } from '../components/molecules';
-import { Header } from '../components/organisms';
+import { ErrorMessage, Header } from '../components/organisms';
 import { Loader } from '../components/atoms';
 
 const HomeScreen = () => {
@@ -23,7 +23,7 @@ const HomeScreen = () => {
     <>
       <Header />
       <section className='py-16 relative'>
-        {loading ? <Loader /> : error ? <h1>{error}</h1> :
+        {loading ? <Loader /> : error ? <ErrorMessage label={'There is an error'} /> :
           <GridContainer className={'gap-y-6 md:gap-y-10 gap-x-6 lg:grid-cols-2'}>
             {rooms.map(room => (
               <ItemOffice key={room.id} room={room} />

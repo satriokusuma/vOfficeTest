@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Calendar, LabelRecervation, ValueRecervation } from '../atoms';
 
-
 const RecervationList = ({ item }) => {
   return (
     <div>

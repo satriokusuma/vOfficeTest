@@ -7,7 +7,7 @@ import { tabTitle } from '../utils/generalFunction';
 
 
 import { Loader } from '../components/atoms';
-import { RecervationList } from '../components/organisms';
+import { ErrorMessage, RecervationList } from '../components/organisms';
 
 
 const RecervationScreen = () => {
@@ -35,7 +35,8 @@ const RecervationScreen = () => {
 
   return (
     <div>
-      {loading ? <Loader /> : error ? <h1>{error}</h1> :
+
+      {loading ? <Loader /> : error ? <ErrorMessage label={'There is an error'} /> :
         <div className='py-4'>
           <h1 className='text-xl text-red-950 font-bold py-4'>Your Recervation Client</h1>
           {recervation.map((item) => (
