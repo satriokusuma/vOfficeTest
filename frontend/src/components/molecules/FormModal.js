@@ -33,12 +33,12 @@ const FormModal = ({ container }) => {
 
 
   return (
-    <div className='center w-full transition-all' ref={container}>
+    <div className='center w-full' ref={container}>
       <form className="bg-white justify-center shadow-lg rounded-lg px-8 py-12 flex flex-col" onSubmit={submitHandler}  >
         {error && <h4 className='text-red-800'>{error}</h4>}
-        <div div className='pt-4 pb-6' >
+        <div className='pt-4 pb-6'>
           <h1 className='text-2xl font-bold md:text-[40px]'>Welcome v0ffice</h1>
-        </div >
+        </div>
         <FormGroup >
           <FormLabel label='You Email' />
           <FormControl

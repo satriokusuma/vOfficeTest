@@ -26,14 +26,13 @@ const ItemOfficeSingle = ({ room }) => {
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
-
   }, []);
 
 
   return (
     <>
-      {state && <FormModal container={modalBody} />}
-      <div className={`${state && 'modalcover'}`}></div>
+      {state && < FormModal container={modalBody} value={state} />}
+      {state && <div className='modalcover'></div>}
       <h2 className="text-3xl capitalize text-gray-900 font-semibold">{room.roomName}</h2>
       <div className='flex items-center justify-between py-2'>
         <div className="flex items-center">
