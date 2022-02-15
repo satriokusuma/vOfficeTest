@@ -18,16 +18,17 @@ const RoomScreen = () => {
 
   const navigate = useNavigate();
 
-  console.log(room);
 
   useEffect(() => {
     error !== `connect ECONNREFUSED ${process.env.REACT_APP_DATABASE_URI}` ? dispatch(listRoomDetails(id)) && tabTitle(`Virtual Office 4.0 | ${room.roomName}`) : tabTitle(`Virtual Office 4.0 | Not Found`);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [error, id, navigate, dispatch]);
 
 
 
   return (
-    <section className='pt-8 md:pt-0 md:-mt-16'>
+    <section className='relative pt-8 md:pt-0 md:-mt-16 '>
       {loading ? <Loader /> : error ? <ErrorMessage label={'There is an error'} /> :
         <ItemOfficeSingle room={room} />
       }

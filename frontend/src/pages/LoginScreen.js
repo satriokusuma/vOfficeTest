@@ -33,7 +33,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <form className="bg-white justify-center rounded px-4 pt-6 pb-8 flex flex-col" onSubmit={submitHandler}>
+    <form className="bg-white justify-center rounded px-4 pt-6 pb-8 flex flex-col" onSubmit={submitHandler} >
       {error && <h4 className='text-red-800'>{error}</h4>}
       <div className='py-8'>
         <h1 className='text-2xl font-bold md:text-[40px]'>Welcome v0ffice</h1>

@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
 import { Button, Icon } from '../atoms';
+import { FormModal } from '.';
 
 const ItemOfficeSingle = ({ room }) => {
+  const [state, setState] = useState(false);
+  const modalBody = useRef(null);
+
+
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+  const handleClickOutside = (event) => {
+    if (modalBody.current && !modalBody.current.contains(event.target)) {
+      setState(false);
+    }
+  };
+
+  const riderectBookHandler = () => {
+    if (!userInfo) {
+      setState(!state);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+
+  }, []);
+
+
   return (
     <>
+      {state && <FormModal container={modalBody} />}
+      <div className={`${state && 'modalcover'}`}></div>
       <h2 className="text-3xl capitalize text-gray-900 font-semibold">{room.roomName}</h2>
       <div className='flex items-center justify-between py-2'>
         <div className="flex items-center">
@@ -31,7 +61,8 @@ const ItemOfficeSingle = ({ room }) => {
           <span className="text-gray-500 font-semibold"> / hours</span>
         </h4>
       </div>
-      <Button className={'bg-pink-600 text-white hover:bg-red-950 transition-all text-lg font-bold rounded-lg w-full my-5'} label={'Book Now'} />
+      <Button className={'bg-pink-600 text-white hover:bg-red-950 transition-all text-lg font-bold rounded-lg w-full my-5'} label={'Book Now'} actionsHandler={riderectBookHandler} />
+
     </>
   );
 };
